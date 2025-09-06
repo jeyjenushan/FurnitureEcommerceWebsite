@@ -398,7 +398,8 @@ This project demonstrates:
 For questions or issues:
 
 - 📧 Email: jeyarubanjenushan3@gmail.com
-- 📖 Documentation: [Wiki](https://medium.com/@jeyarubanjenusan/building-a-secure-furniture-e-commerce-application-a-comprehensive-journey-through-modern-web-9e8654250a83)
+- 📖 Documentation: [Medium](https://medium.com/@jeyarubanjenusan/building-a-secure-furniture-e-commerce-application-a-comprehensive-journey-through-modern-web-9e8654250a83)
+-  Demo Video:[Demo](https://drive.google.com/file/d/1uKcF4BUDRMlTMmt5VEt1jRjdNZ9dIG8F/view?usp=sharing)
 
 ## 🙏 Acknowledgments
 
@@ -414,6 +415,7 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
 
 
 
