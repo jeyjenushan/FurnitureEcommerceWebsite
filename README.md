@@ -398,7 +398,7 @@ This project demonstrates:
 For questions or issues:
 
 - 📧 Email: jeyarubanjenushan3@gmail.com
-- 📖 Documentation: [Wiki](https://github.com/yourusername/FurnitureEcommerceWebsite/wiki)
+- 📖 Documentation: [Wiki](https://medium.com/@jeyarubanjenusan/building-a-secure-furniture-e-commerce-application-a-comprehensive-journey-through-modern-web-9e8654250a83)
 
 ## 🙏 Acknowledgments
 
@@ -414,5 +414,6 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
 
 
