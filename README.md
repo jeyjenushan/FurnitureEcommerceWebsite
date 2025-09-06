@@ -2,11 +2,10 @@
 
 A comprehensive, secure furniture e-commerce web application built with **React**, **Spring Boot**, **MySQL**, and **Asgardeo OIDC Authentication**. This project demonstrates enterprise-grade security practices while addressing OWASP Top 10 vulnerabilities and implementing modern authentication protocols.
 
-
-
 ## 🏆 Assessment Overview
 
 This project was developed as part of **Secure Web Application Development** to evaluate understanding and practical implementation of:
+
 - **Information Security** best practices
 - **OWASP Top 10** vulnerability mitigation
 - **OIDC Authentication** with cloud-based Identity Provider
@@ -16,6 +15,7 @@ This project was developed as part of **Secure Web Application Development** to 
 ## 🎯 Key Features
 
 ### 🔐 Security Features
+
 - **OIDC Authentication** with Asgardeo
 - **OWASP Top 10** compliance
 - **HTTPS** enforcement
@@ -26,6 +26,7 @@ This project was developed as part of **Secure Web Application Development** to 
 - **Access control** with JWT tokens
 
 ### 📱 Application Features
+
 - **User Authentication** (Login/Logout)
 - **User Profile Management**
 - **Product Ordering System**
@@ -37,6 +38,7 @@ This project was developed as part of **Secure Web Application Development** to 
 ## 🏗️ Technology Stack
 
 ### Backend
+
 - **Framework**: Spring Boot 3.2.0
 - **Security**: Spring Security with OAuth2
 - **Database**: MySQL 8.0
@@ -44,6 +46,7 @@ This project was developed as part of **Secure Web Application Development** to 
 - **Authentication**: Asgardeo OIDC
 
 ### Frontend
+
 - **Framework**: React 18 with Vite
 - **Styling**: Tailwind CSS
 - **State Management**: React Query
@@ -52,6 +55,7 @@ This project was developed as part of **Secure Web Application Development** to 
 - **Date Picker**: React DatePicker
 
 ### Infrastructure
+
 - **Authentication Provider**: Asgardeo (WSO2)
 - **Database**: MySQL
 - **Development Server**: Vite (Frontend), Spring Boot (Backend)
@@ -157,44 +161,45 @@ Frontend will be available at: **https://localhost:5173**
 ## 📸 Application Screenshots
 
 ### Home Page
-![Home Page](https://drive.google.com/file/d/1At_Cmzpui-qEI9jT0oF9JI3Uk9n4W0DI/view?usp=sharing)
 
-
+![Home Page](READMEFOLDER/Home.png)
 
 ### Dashboard
-![Dashboard](https://drive.google.com/file/d/1R7pRQx4OgKxe6xTJwyaBQnrJiEGH4Xte/view?usp=sharing)
-*User dashboard with quick actions and order statistics*
+
+![Dashboard](READMEFOLDER/Dashboard.png)
+_User dashboard with quick actions and order statistics_
 
 ### User Profile
-![User Profile](https://drive.google.com/file/d/1qseOE40Kqht-F_jz686_lZtM_ZReJ30V/view?usp=sharing)
-*Authenticated user profile information*
+
+![User Profile](READMEFOLDER/MyProfile.png)
+_Authenticated user profile information_
 
 ### Create Order
-![Create Order](https://drive.google.com/file/d/1IhGQoIk7RDvxk5UsYwiUlplntLul0oIj/view?usp=sharing)
-*Secure order creation with validation*
+
+![Create Order](READMEFOLDER/CreateOrder.png)
+_Secure order creation with validation_
 
 ### Order Management
-![Orders List](https://drive.google.com/file/d/1zutHixkrZrqe20JFwOcqNmByfMEYSHsy/view?usp=sharing)
-*View and manage all orders with filtering options*
 
-
+![Orders List](READMEFOLDER/OrderList.png)
+_View and manage all orders with filtering options_
 
 ## 🔒 Security Implementation
 
 ### OWASP Top 10 Mitigation
 
-| Vulnerability | Mitigation Strategy |
-|---------------|-------------------|
-| **A01: Broken Access Control** | OAuth2 authentication, role-based access control |
-| **A02: Cryptographic Failures** | HTTPS, encrypted data storage, secure JWT tokens |
-| **A03: Injection** | Parameterized queries, input validation, ORM usage |
-| **A04: Insecure Design** | Threat modeling, secure architecture patterns |
-| **A05: Security Misconfiguration** | Secure headers, environment-based configs |
-| **A06: Vulnerable Components** | Regular dependency updates, security scanning |
-| **A07: Identity/Authentication** | OIDC with Asgardeo, secure session management |
-| **A08: Software/Data Integrity** | Input validation, secure API design |
-| **A09: Security Logging** | Comprehensive logging, security monitoring |
-| **A10: Server-Side Request Forgery** | Input validation, whitelist approach |
+| Vulnerability                        | Mitigation Strategy                                |
+| ------------------------------------ | -------------------------------------------------- |
+| **A01: Broken Access Control**       | OAuth2 authentication, role-based access control   |
+| **A02: Cryptographic Failures**      | HTTPS, encrypted data storage, secure JWT tokens   |
+| **A03: Injection**                   | Parameterized queries, input validation, ORM usage |
+| **A04: Insecure Design**             | Threat modeling, secure architecture patterns      |
+| **A05: Security Misconfiguration**   | Secure headers, environment-based configs          |
+| **A06: Vulnerable Components**       | Regular dependency updates, security scanning      |
+| **A07: Identity/Authentication**     | OIDC with Asgardeo, secure session management      |
+| **A08: Software/Data Integrity**     | Input validation, secure API design                |
+| **A09: Security Logging**            | Comprehensive logging, security monitoring         |
+| **A10: Server-Side Request Forgery** | Input validation, whitelist approach               |
 
 ### Authentication Flow
 
@@ -216,7 +221,6 @@ sequenceDiagram
     B->>F: Redirect with Session
     F->>U: Dashboard
 ```
-
 
 ## 📂 Project Structure
 
@@ -252,7 +256,6 @@ FurnitureEcommerceWebsite/
 
 ### Local Development Deployment
 
-
 ```bash
 # Build and run with Docker Compose
 docker-compose up --build
@@ -266,6 +269,7 @@ docker-compose up --build
 #### Manual Deployment
 
 1. **Build Backend**:
+
 ```bash
 cd server
 ./mvnw clean package
@@ -273,6 +277,7 @@ java -jar target/ecommerce-backend-1.0.0.jar
 ```
 
 2. **Build Frontend**:
+
 ```bash
 cd client
 npm run build
@@ -282,6 +287,7 @@ npm run build
 ### Production Deployment
 
 For production deployment, consider:
+
 - **Environment Variables**: Use proper secret management
 - **SSL Certificates**: Obtain valid SSL certificates
 - **Database Security**: Configure database with restricted access
@@ -291,14 +297,17 @@ For production deployment, consider:
 ## 🔍 API Documentation
 
 ### Authentication Endpoints
+
 - `GET /oauth2/authorization/asgardeo` - Initiate OAuth2 login
 - `GET /api/auth/user` - Get current user information
 - `POST /api/auth/logout` - User logout
 
 ### User Endpoints
+
 - `GET /api/user/profile` - Get user profile
 
 ### Order Endpoints
+
 - `GET /api/orders` - Get all user orders
 - `GET /api/orders/upcoming` - Get upcoming orders
 - `GET /api/orders/past` - Get past orders
@@ -339,6 +348,7 @@ CREATE TABLE orders (
 ### Common Issues
 
 #### 1. Authentication Issues
+
 ```bash
 # Check Asgardeo configuration
 # Verify callback URLs match exactly
@@ -347,6 +357,7 @@ CREATE TABLE orders (
 ```
 
 #### 2. Database Connection Issues
+
 ```bash
 # Verify MySQL is running
 sudo systemctl status mysql
@@ -359,6 +370,7 @@ echo $DATABASE_URL
 ```
 
 #### 3. CORS Issues
+
 ```bash
 # Verify frontend URL in backend configuration
 # Check credentials are included in requests
@@ -366,11 +378,11 @@ echo $DATABASE_URL
 ```
 
 #### 4. SSL Certificate Issues
+
 ```bash
 # Generate development certificates
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
 ```
-
 
 ## 📝 Assessment Deliverables
 
@@ -399,6 +411,7 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 ## 🏆 Assessment Results
 
 This project demonstrates:
+
 - **Security-First Approach**: Comprehensive OWASP Top 10 mitigation
 - **Modern Authentication**: OIDC implementation with enterprise IDP
 - **Full-Stack Expertise**: React + Spring Boot integration
@@ -408,10 +421,9 @@ This project demonstrates:
 ## 📞 Support
 
 For questions or issues:
+
 - 📧 Email: jeyarubanjenushan3@gmail.com
 - 📖 Documentation: [Wiki](https://github.com/yourusername/FurnitureEcommerceWebsite/wiki)
-
-
 
 ## 🙏 Acknowledgments
 
@@ -426,5 +438,4 @@ For questions or issues:
 
 ---
 
-*Built with ❤️ for secure e-commerce experiences*
-
+_Built with ❤️ for secure e-commerce experiences_
