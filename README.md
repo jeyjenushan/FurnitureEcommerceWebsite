@@ -89,10 +89,10 @@ cd FurnitureEcommerceWebsite
 mysql -u root -p
 
 # Create database
-CREATE DATABASE ecommerce CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE furniture_ecommerce CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 # Create user (optional)
-CREATE USER 'ecommerce_user'@'localhost' IDENTIFIED BY 'your_password';
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'your_password';
 GRANT ALL PRIVILEGES ON ecommerce.* TO 'ecommerce_user'@'localhost';
 FLUSH PRIVILEGES;
 ```
@@ -439,3 +439,4 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
