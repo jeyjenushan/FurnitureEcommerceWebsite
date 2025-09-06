@@ -121,7 +121,7 @@ export FRONTEND_URL="https://localhost:5173"
 
 #### 5. Frontend Configuration
 
-Create `.env.local` file in the client directory:
+Create `.env` file in the client directory:
 
 ```env
 VITE_API_URL="https://localhost:8080/api"
@@ -156,31 +156,28 @@ Frontend will be available at: **https://localhost:5173**
 
 ## 📸 Application Screenshots
 
-### Login Page
-![Login Page](screenshots/login-page.png)
-*Secure OIDC authentication with Asgardeo*
+### Home Page
+![Home Page](https://drive.google.com/file/d/1At_Cmzpui-qEI9jT0oF9JI3Uk9n4W0DI/view?usp=sharing)
+
+
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](https://drive.google.com/file/d/1R7pRQx4OgKxe6xTJwyaBQnrJiEGH4Xte/view?usp=sharing)
 *User dashboard with quick actions and order statistics*
 
 ### User Profile
-![User Profile](screenshots/profile.png)
+![User Profile](https://drive.google.com/file/d/1qseOE40Kqht-F_jz686_lZtM_ZReJ30V/view?usp=sharing)
 *Authenticated user profile information*
 
 ### Create Order
-![Create Order](screenshots/create-order.png)
+![Create Order](https://drive.google.com/file/d/1IhGQoIk7RDvxk5UsYwiUlplntLul0oIj/view?usp=sharing)
 *Secure order creation with validation*
 
 ### Order Management
-![Orders List](screenshots/orders-list.png)
+![Orders List](https://drive.google.com/file/d/1zutHixkrZrqe20JFwOcqNmByfMEYSHsy/view?usp=sharing)
 *View and manage all orders with filtering options*
 
-## 🎥 Demo Video
 
-[![Application Demo](screenshots/video-thumbnail.png)](videos/application-demo.mp4)
-
-*Click to watch the complete application demonstration*
 
 ## 🔒 Security Implementation
 
@@ -430,3 +427,4 @@ For questions or issues:
 ---
 
 *Built with ❤️ for secure e-commerce experiences*
+
