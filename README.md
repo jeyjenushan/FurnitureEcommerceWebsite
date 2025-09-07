@@ -2,6 +2,9 @@
 
 A comprehensive, secure furniture e-commerce web application built with **React**, **Spring Boot**, **MySQL**, and **Asgardeo OIDC Authentication**. This project demonstrates enterprise-grade security practices while addressing OWASP Top 10 vulnerabilities and implementing modern authentication protocols.
 
+# Demo
+-  Demo Video:[Demo](https://drive.google.com/file/d/1hl5vCcr_sHJvQhfVkGvN9osKu7CNOFqc/view?usp=sharing)
+
 # Login Credentials
 - **Username: jenusan@gmail.com
 - **Password: Jenusan@2025
@@ -452,7 +455,7 @@ For questions or issues:
 
 - 📧 Email: jeyarubanjenushan3@gmail.com
 - 📖 Documentation: [Medium](https://medium.com/@jeyarubanjenusan/building-a-secure-furniture-e-commerce-application-a-comprehensive-journey-through-modern-web-9e8654250a83)
--  Demo Video:[Demo](https://drive.google.com/file/d/1uKcF4BUDRMlTMmt5VEt1jRjdNZ9dIG8F/view?usp=sharing)
+
 
 ## 🙏 Acknowledgments
 
@@ -468,6 +471,7 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
 
 
 
