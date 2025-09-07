@@ -93,7 +93,7 @@ CREATE DATABASE furniture_ecommerce CHARACTER SET utf8mb4 COLLATE utf8mb4_unicod
 
 # Create user (optional)
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'your_password';
-GRANT ALL PRIVILEGES ON ecommerce.* TO 'ecommerce_user'@'localhost';
+GRANT ALL PRIVILEGES ON furniture_ecommerce.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
@@ -103,7 +103,7 @@ FLUSH PRIVILEGES;
 2. **Create Application**:
    - **Application Type**: Traditional Web Application
    - **Grant Types**: Authorization Code, Refresh Token
-   - **Callback URLs**: `http://localhost:8080/login/oauth2/code/asgardeo`
+   - **Callback URLs**: `https://localhost:8443/login/oauth2/code/asgardeo`
    - **Logout URLs**: `https://localhost:5173`
    - **Scopes**: `openid`, `profile`, `email`, `address`, `phone`, `groups`, `roles`
 
@@ -118,7 +118,7 @@ export DATABASE_USERNAME="root"
 export DATABASE_PASSWORD="your_mysql_password"
 export ASGARDIO_CLIENT_ID="your_asgardeo_client_id"
 export ASGARDIO_CLIENT_SECRET="your_asgardeo_client_secret"
-export ASCARDIO_REDIRECT_URI="http://localhost:8080/login/oauth2/code/asgardeo"
+export ASCARDIO_REDIRECT_URI="http://localhost:8443/login/oauth2/code/asgardeo"
 export ASGARDIO_ISSUE_URI="https://api.asgardeo.io/t/your_org/oauth2/token"
 export FRONTEND_URL="https://localhost:5173"
 ```
@@ -128,7 +128,7 @@ export FRONTEND_URL="https://localhost:5173"
 Create `.env` file in the client directory:
 
 ```env
-VITE_API_URL="https://localhost:8080/api"
+VITE_API_URL="https://localhost:8443/api"
 VITE_ASGARDEO_BASE_URL="https://api.asgardeo.io/t/your_org"
 VITE_ASGARDEO_CLIENT_ID="your_asgardeo_client_id"
 VITE_REDIRECT_URI="https://localhost:5173/auth/callback"
@@ -415,6 +415,7 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
 
 
 
