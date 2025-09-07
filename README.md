@@ -97,6 +97,18 @@ GRANT ALL PRIVILEGES ON furniture_ecommerce.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
+#### 3.Generate SSL Certificate
+```bash
+openssl pkcs12 -export \
+  -in localhost+2.pem \
+  -inkey localhost+2-key.pem \
+  -out localhost.p12 \
+  -name localhost \
+  -CAfile "C:\Users\youruser\AppData\Local\mkcert\rootCA.pem" \
+  -caname root
+
+```
+
 #### 3. Asgardeo Configuration
 
 1. **Create Asgardeo Account**: Visit [https://asgardeo.io](https://asgardeo.io)
@@ -133,14 +145,12 @@ export spring.security.oauth2.client.registration.asgardeo.client-id=${ASGARDIO_
 export spring.security.oauth2.client.registration.asgardeo.client-secret=${ASGARDIO_CLIENT_SECRET}
 
 # HTTPS Configuration
-export server.port=8443
-export server.ssl.enabled=true
-export server.ssl.key-store=classpath:keystore.p12
-export server.ssl.key-store-password=${PASSWORD}
-export server.ssl.key-store-type=PKCS12
-export server.ssl.key-alias=mycert
-
-
+server.port=8443
+server.ssl.enabled=true
+server.ssl.key-store=classpath:localhost.p12
+server.ssl.key-store-password=${password}
+server.ssl.key-store-type=PKCS12
+server.ssl.key-alias=localhost
 
 export spring.security.oauth2.client.registration.asgardeo.redirect-uri=${ASGARDIO_REDIRECT_URI}
 export spring.security.oauth2.client.registration.asgardeo.authorization-grant-type=authorization_code
@@ -453,6 +463,7 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
 
 
 
