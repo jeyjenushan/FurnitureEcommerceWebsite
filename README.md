@@ -2,6 +2,10 @@
 
 A comprehensive, secure furniture e-commerce web application built with **React**, **Spring Boot**, **MySQL**, and **Asgardeo OIDC Authentication**. This project demonstrates enterprise-grade security practices while addressing OWASP Top 10 vulnerabilities and implementing modern authentication protocols.
 
+# Login Credentials
+##username : jenushan@gmail.com
+##password : Viber+1014
+
 ## 🏆 Assessment Overview
 
 This project was developed as part of **Secure Web Application Development** to evaluate understanding and practical implementation of:
@@ -463,6 +467,7 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
 
 
 
