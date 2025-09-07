@@ -11,9 +11,13 @@ export default defineConfig({
   plugins: [react(),tailwindcss(),],
    server: {
     port: 5173,
+https: {
+  key: fs.readFileSync('localhost+2-key.pem'),
+  cert: fs.readFileSync('localhost+2.pem'),
+},
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+     target: 'https://localhost:8443',
         changeOrigin: true,
         secure: false
       }
