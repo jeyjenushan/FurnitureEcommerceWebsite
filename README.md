@@ -113,14 +113,52 @@ Create environment variables or update `application.properties`:
 
 ```bash
 # Environment Variables (Recommended)
-export DATABASE_URL="jdbc:mysql://localhost:3306/furniture_ecommerce?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
-export DATABASE_USERNAME="root"
-export DATABASE_PASSWORD="your_mysql_password"
-export ASGARDIO_CLIENT_ID="your_asgardeo_client_id"
-export ASGARDIO_CLIENT_SECRET="your_asgardeo_client_secret"
-export ASCARDIO_REDIRECT_URI="http://localhost:8443/login/oauth2/code/asgardeo"
-export ASGARDIO_ISSUE_URI="https://api.asgardeo.io/t/your_org/oauth2/token"
-export FRONTEND_URL="https://localhost:5173"
+export spring.application.name=EcommerceBackEnd
+
+# Database configuration
+export spring.datasource.url=${DATABASE_URL}
+export spring.datasource.username=${DATABASE_USERNAME}
+export spring.datasource.password=${DATABASE_PASSWORD}
+export spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA settings
+export spring.jpa.show-sql=true
+export spring.jpa.hibernate.ddl-auto=update
+
+
+
+# === Asgardeo OIDC client registration ===
+export spring.security.oauth2.client.registration.asgardeo.client-name=Asgardeo
+export spring.security.oauth2.client.registration.asgardeo.client-id=${ASGARDIO_CLIENT_ID}
+export spring.security.oauth2.client.registration.asgardeo.client-secret=${ASGARDIO_CLIENT_SECRET}
+
+# HTTPS Configuration
+export server.port=8443
+export server.ssl.enabled=true
+export server.ssl.key-store=classpath:keystore.p12
+export server.ssl.key-store-password=${PASSWORD}
+export server.ssl.key-store-type=PKCS12
+export server.ssl.key-alias=mycert
+
+
+
+export spring.security.oauth2.client.registration.asgardeo.redirect-uri=${ASGARDIO_REDIRECT_URI}
+export spring.security.oauth2.client.registration.asgardeo.authorization-grant-type=authorization_code
+export spring.security.oauth2.client.registration.asgardeo.scope=openid,address,email,groups,phone,profile,roles
+# IMPORTANT: ADD THIS - Provider configuration with proper URLs
+export spring.security.oauth2.client.provider.asgardeo.authorization-uri=${ASGARDIO_AUTH_URI}
+export spring.security.oauth2.client.provider.asgardeo.user-info-uri=${ASGARDIO_USER_INFO}
+export spring.security.oauth2.client.provider.asgardeo.jwk-set-uri=${ASGARDIO_JWKS}
+export spring.security.oauth2.client.provider.asgardeo.user-name-attribute=sub
+
+
+# Provider configuration (copy the Issuer URI from Asgardeo)
+export spring.security.oauth2.client.provider.asgardeo.issuer-uri=${ASGARDIO_ISSUE_URI}
+
+# Frontend URL
+export frontend.url=https://localhost:5173
+
+
 ```
 
 #### 5. Frontend Configuration
@@ -415,6 +453,7 @@ For questions or issues:
 ---
 
 _Built with ❤️ for secure e-commerce experiences_
+
 
 
 
