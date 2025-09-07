@@ -20,17 +20,42 @@ public class OAuth2AuthenticationSuccessHandler implements AuthenticationSuccess
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                         Authentication authentication) throws IOException {
 
-        OAuth2User oauth2User = (OAuth2User) authentication.getPrincipal();
+        try {
+            OAuth2User oauth2User = (OAuth2User) authentication.getPrincipal();
 
-        // Extract user info from OAuth2User
-        String username = oauth2User.getAttribute("sub");
-        String name = oauth2User.getAttribute("name");
-        String email = oauth2User.getAttribute("email");
+            // Extract user info from OAuth2User
+            String username = oauth2User.getAttribute("sub");
+            String name = oauth2User.getAttribute("name");
+            String email = oauth2User.getAttribute("email");
 
-        // Store user info in session or create user record
-        request.getSession().setAttribute("user", oauth2User);
+            // Store user info in session
+            request.getSession().setAttribute("user", oauth2User);
+            request.getSession().setAttribute("authenticated", true);
 
-        response.sendRedirect
-                (frontendUrl + "/dashboard");
+            System.out.println("=== OAuth Success Handler ===");
+            System.out.println("User: " + username);
+            System.out.println("Frontend URL: " + frontendUrl);
+
+            // Ensure we have a valid redirect URL
+            String redirectUrl = frontendUrl;
+            if (redirectUrl == null || redirectUrl.isEmpty()) {
+                redirectUrl = "https://localhost:5173";
+            }
+
+            // Add trailing slash if not present
+            if (!redirectUrl.endsWith("/")) {
+                redirectUrl += "/";
+            }
+
+            System.out.println("Redirecting to: " + redirectUrl);
+            response.sendRedirect(redirectUrl);
+
+        } catch (Exception e) {
+            System.err.println("Error in OAuth success handler: " + e.getMessage());
+            e.printStackTrace();
+
+            // Fallback redirect
+            response.sendRedirect("https://localhost:5173/");
+        }
     }
 }
